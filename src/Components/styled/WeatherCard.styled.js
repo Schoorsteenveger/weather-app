@@ -5,17 +5,16 @@ const StyledWeatherCard = styled.div`
     display: flex;
     justify-content:center;
     flex-direction: column;
-    margin: 100px 0 ;
+    align-self: end;
     min-height: auto;
     max-width: 768px;
+    margin: 3em 0;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
-    padding: 25px 30px;
-    border-radius: 3px;
+    padding: 1.5rem 1.8rem;
     background-color:blue;
     background-size: cover;
     position: relative;
 }
-
 
 .displayDataResult {
     background-color: #3968dc45;

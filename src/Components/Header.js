@@ -1,11 +1,16 @@
 import React from 'react'
-import { styledHeader } from './styled/Header.styled'
+import { StyledHeader } from './styled/Header.styled'
 
-function Header() {
+
+
+const Header = () => {
     return (
-        <styledHeader>
+
+        <StyledHeader>
             <h2>Weather App</h2>
-        </styledHeader>
+            <h3>Weekly view</h3>
+        </StyledHeader>
+
     )
 }
 

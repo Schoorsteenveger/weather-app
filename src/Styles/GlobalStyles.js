@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
-import myImage from '../../src/Assets/weatherbg.jpg';
-import myImage2 from '../../src/Assets/weatherbg1.jpg';
+import myImage from '../../src/Assets/weatherbg.jpg'
+import myImage2 from '../../src/Assets/weatherbg1.jpg'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -14,44 +14,42 @@ const GlobalStyles = createGlobalStyle`
 
 body {
     display:flex;
+    justify-content:center;
     background-color: green;
     background:url(${myImage2});
     background-size: cover;
-    color: rgba (21, 26, 33);
+    background-repeat: no-repeat;
     font-family: 'Lato', sans-serif;
-    font-size:1.2em;
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    align-items: center;
+    font-size:16px;
     margin-bottom: 100px;
-    background-color: green;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
+.DefaultInput[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none !important;
+}
 
-/* @media  only screen and (min-width: 960px) {
-    display: grid;
+@media(min-width: 768px) {
     height: 100%;
     background-color: greenyellow;
-    } */
+    }
 
 p {
     line-height: 1.8;
 }
-
 img {
     width: 100%;
 }
-
-
-.cardView {
+.App {
     display: flex;
-    justify-content:center;
-    flex-direction: column;
-    align-content: center;
+    justify-content: center;
     align-items: center;
-    margin: 100px 0 ;
-    max-width: 320px;
+    flex-direction:column;
+}
+.cardView {
+    min-width: 350px;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
     padding: 25px 30px;
     border-radius: 3px;
@@ -66,7 +64,6 @@ img {
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
     padding: 65px 30px;
     color:white;
-    /* align-items: stretch; */
     text-transform: uppercase;
     font-weight: bold;
     height: auto;
@@ -75,7 +72,6 @@ img {
 img.weatherIcon {
     width: 150px;
 }
-
 .header {
     flex-direction: column;
     text-align: center;
@@ -83,27 +79,36 @@ img.weatherIcon {
     background-color: rgba(0,0,0,0.4);
     color: white;
     padding: 2rem 3rem;
-
   h2 {
     font-weight: 600;
     color: white;
   }
 }
 
-.containerIconArrow{
+.containerAccordion {
+    margin-top: 3em;
+	color:white;
+}
+
+.getWeeklyDetails{
+    border-radius: 8px;
+    padding:0.5rem 0.8rem;
     background-color: #f2f2f2;
     color: black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 1.2rem;
+    transition: scale cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.containerIconArrow:hover {
+.getWeeklyDetails:hover {
     background-color: greenyellow;
     cursor: pointer;
-    transition: ease-in 1ms;
+    transform: ease-in 1ms;
 }
-
-
+.iconArrowBtn {
+    margin-left:1.125rem;
+}
 `
 export default GlobalStyles

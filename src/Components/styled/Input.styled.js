@@ -1,7 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledInput = styled.input`
-padding: 15px 20px;
-width: 100%;
-font-size: 20px;
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.2rem;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-left: 5px;
 `

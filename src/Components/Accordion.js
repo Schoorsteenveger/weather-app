@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FcAbout, FcExpand, FcFaq } from "react-icons/fc";
+import { FcExpand } from "react-icons/fc";
 import { StyledAccordion } from './styled/Accordion.styled';
 import ConvertDate from './FormattedDate';
 
@@ -24,7 +24,7 @@ function Accordion({ weatherDataPerDay }) {
                 <img className="weatherIcon" alt="weeklyweather" src={`https://openweathermap.org/img/wn/${weatherDataPerDay.weather[0].icon}@4x.png`} />
                 <p>{Math.round(min_temp)}C°/{Math.round(max_temp)}C°</p>
                 < FcExpand className="iconDropDown" />
-                
+
 
             </StyledAccordion>
             <StyledAccordion className={`accordion ${!isActive ? "collapsed" : ""}`}>
