@@ -2,18 +2,17 @@ import React, { useEffect, useState } from 'react';
 import GlobalStyles from "./Styles/GlobalStyles";
 import WeatherCard from "./Components/WeatherCard";
 import SearchBar from "./Components/SearchBar";
-import Header from "./Components/Header";
+// import Header from "./Components/Header";
 import WeatherDetailsScreen from './Pages/WeatherDetailsScreen';
 
 const apikey = process.env.REACT_APP_API_KEY;
 
 function App() {
-
   const [input, setInput] = useState('');
   const [weatherData, setWeatherData] = useState([]);
   const [weatherDetails, setWeatherDetails] = useState(null);
   const [coord, setCoord] = useState(null);
-  const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   // Weather data for weather card
   useEffect(() => {
@@ -25,7 +24,7 @@ function App() {
       } catch (error) {
         console.error('Error fetching weather data:', error);
       }
-    };
+    }
     fetchWeatherData();
   }, [input]);
 
@@ -42,12 +41,17 @@ function App() {
       } catch (error) {
         console.log(error);
       }
-    };
+    }
 
     if (coord && buttonClicked) {
       fetchWeeklyData();
     }
   }, [coord, buttonClicked]);
+
+  // Reset weatherDetails when input changes
+  useEffect(() => {
+    setWeatherDetails(null);
+  }, [input]);
 
   // Button click handler to set coordinates
   const handleButtonClick = (newCoord) => {
@@ -56,7 +60,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       {/* <Header /> */}
       <GlobalStyles />
       <SearchBar input={input} setInput={setInput} />

@@ -25,7 +25,7 @@ export const StyledAccordion = styled.div`
 		border-bottom: 2px solid blue;
 		padding: 20px 15px;
 		align-items: center;
-		color: white;
+		color: black;
 	}
 
 	.accordion.active {

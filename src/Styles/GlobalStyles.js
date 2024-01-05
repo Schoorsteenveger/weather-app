@@ -12,10 +12,14 @@ const GlobalStyles = createGlobalStyle`
     padding:0;
 }
 
+:root {
+  font-size: 16px;
+}
+
 body {
     display:flex;
     justify-content:center;
-    background-color: green;
+    background-color: transparent;
     background:url(${myImage2});
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,18 +27,16 @@ body {
     font-size:16px;
     margin-bottom: 100px;
     max-width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
-.DefaultInput[type="search"]::-webkit-search-cancel-button {
+.DefaultInput[type="search"]::-webkit-search-cancel-button,
+.DefaultInput[type="search"]::-webkit-search-clear-button {
   -webkit-appearance: none;
   display: none !important;
+  visibility: hidden !important;
 }
-
-@media(min-width: 768px) {
-    height: 100%;
-    background-color: greenyellow;
-    }
 
 p {
     line-height: 1.8;
@@ -56,7 +58,7 @@ img {
     background-image: url(${myImage});
     background-color:blue;
     background-size: cover;
-    position: relative;
+    position: relative; 
 }
 
 .displayDataResult {
@@ -66,7 +68,7 @@ img {
     color:white;
     text-transform: uppercase;
     font-weight: bold;
-    height: auto;
+    height: 100%;
 }
 
 img.weatherIcon {
@@ -87,7 +89,6 @@ img.weatherIcon {
 
 .containerAccordion {
     margin-top: 3em;
-	color:white;
 }
 
 .getWeeklyDetails{
