@@ -31,12 +31,17 @@ body {
     overflow-x: hidden;
 }
 
-.DefaultInput[type="search"]::-webkit-search-cancel-button,
-.DefaultInput[type="search"]::-webkit-search-clear-button {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-clear-button {
   -webkit-appearance: none;
   appearance: none;
   display: none !important;
-  opacity:0;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position:absolute;
+  right:0;
+  width:1px;
+  height:1px;
 }
 
 p {
