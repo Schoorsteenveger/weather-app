@@ -34,8 +34,9 @@ body {
 .DefaultInput[type="search"]::-webkit-search-cancel-button,
 .DefaultInput[type="search"]::-webkit-search-clear-button {
   -webkit-appearance: none;
+  appearance: none;
   display: none !important;
-  visibility: hidden !important;
+  opacity:0;
 }
 
 p {
