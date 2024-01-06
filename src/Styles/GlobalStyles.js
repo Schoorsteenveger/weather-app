@@ -32,30 +32,26 @@ body {
 }
 
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-clear-button {
+input[type="search"]::-webkit-search-clear-button,
+input[type="search"]::-webkit-search-results-button  {
   -webkit-appearance: none;
-  appearance: none;
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  position:absolute;
-  right:0;
-  width:1px;
-  height:1px;
 }
 
 p {
     line-height: 1.8;
 }
+
 img {
     width: 100%;
 }
+
 .App {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
 }
+
 .cardView {
     min-width: 350px;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);

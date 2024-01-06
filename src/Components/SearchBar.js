@@ -28,8 +28,8 @@ const SearchBar = ({ setInput }) => {
         <StyledSearchBar>
             <FaSearch />
             <StyledInput
-                className='DefaultInput'
                 type="search"
+                aria-hidden="true"
                 placeholder="Search..."
                 onChange={inputHandler}
                 value={searchInput}
