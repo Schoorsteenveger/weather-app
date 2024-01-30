@@ -3,39 +3,41 @@ import { StyledSearchBar } from './styled/SearchBar.styled';
 import { StyledInput } from './styled/Input.styled';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 
-const SearchBar = ({ setInput }) => {
+const SearchBar = ({ setInput, resetWeatherData }) => {
     const [searchInput, setSearchInput] = useState('');
+    const [showClearIcon, setShowClearIcon] = useState(false);
 
     const inputHandler = (event) => {
         setSearchInput(event.target.value);
+        setShowClearIcon(event.target.value !== ''); // Show icon when there is input
     };
 
     const clearInput = () => {
         setSearchInput('');
+        setShowClearIcon(false); // Hide icon after clearing input
+        resetWeatherData(); // Call the resetWeatherData callback to reset weatherData and weatherDetails
     };
 
     const handleEnterKeyPress = (event) => {
         if (event.key === 'Enter') {
             console.log('Enter key pressed. Value:', searchInput);
             setInput(searchInput);
-            setSearchInput('');
+            setSearchInput(searchInput);
+            setShowClearIcon(true);
         }
     };
-
-    console.log('Rendering SearchBar with input:', searchInput);
 
     return (
         <StyledSearchBar>
             <FaSearch />
             <StyledInput
                 type="text"
-                aria-hidden="true"
                 placeholder="Search..."
                 onChange={inputHandler}
                 value={searchInput}
                 onKeyDown={handleEnterKeyPress}
             />
-            {searchInput && <FaTimes onClick={clearInput} />}
+            {showClearIcon && <FaTimes onClick={clearInput} />}
         </StyledSearchBar>
     );
 };

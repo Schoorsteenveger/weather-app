@@ -30,14 +30,6 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
-/* 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-    -webkit-appearance: none;
-    display: none;
-} */
 
 p {
     line-height: 1.8;

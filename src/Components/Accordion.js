@@ -25,7 +25,6 @@ function Accordion({ weatherDataPerDay }) {
                 <p>{Math.round(min_temp)}C°/{Math.round(max_temp)}C°</p>
                 < FcExpand className="iconDropDown" />
 
-
             </StyledAccordion>
             <StyledAccordion className={`accordion ${!isActive ? "collapsed" : ""}`}>
                 <div className='grid-item'>Temp:</div>
